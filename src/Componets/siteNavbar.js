@@ -1,50 +1,90 @@
 import MainLogo from "../Images/bbLogo.png"
 import styled from "styled-components"
 
-const navWrapper = styled.nav`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
+const NavWrapper = styled.div`
+background-color: white;
+overflow: hidden;
+
 `;
-const listWrapper = styled.li`
-  display: inline;
+const ListWrapper = styled.ul`
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: white;
+`;
+
+const ListItemWrapper=styled.li`
+    float: left;
+  `
+  
+  const ListAnchorWrapper =styled.a`
   float: left;
-`;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  `
+  const NavImageWrapper=styled.div`
+  float: left;
+`
+const NavImageRightWrapper=styled.div`
+float: right;
+`
+const UserActionWrapper=styled.li`
+    float: right;
+`
+
+
 
 const SiteNav = () =>{
     return(
-        <navWrapper>
-        <nav id="siteNavBar">
-            <div>
-            <img src={MainLogo} alt='store logo' height='100' width= '100'/>
-            <a href="#shop"></a>
-            </div>
-            <ul id="siteNavBar-list">
-                <listWrapper>
+            
+        <NavWrapper id="siteNavBar"> 
+             <NavImageWrapper><img src={MainLogo} alt='store logo' height='100' width= '100'/></NavImageWrapper>
+            
+            <ListWrapper id="siteNavBar-list">  
                 <li className="siteNavBar-item">
-                    <a href="#shop">SHOP</a>
+                    <ListAnchorWrapper href="#shop">SHOP</ListAnchorWrapper>
                 </li>
                 <li className="siteNavBar-item">
-                    <a href="#shop">SUBSCRIPTIONS</a>
+                    <ListAnchorWrapper href="#subs">SUBSCRIPTIONS</ListAnchorWrapper>
                 </li>
                 <li className="siteNavBar-item">
-                    <a href="#shop">HOLIDAY</a>
+                    <ListAnchorWrapper href="#holiday">HOLIDAY</ListAnchorWrapper>
                 </li>
                 <li className="siteNavBar-item">
-                    <a href="#shop">LOCATIONS</a>
+                    <ListAnchorWrapper href="#locations">LOCATIONS</ListAnchorWrapper>
                 </li>
                 <li className="siteNavBar-item">
-                    <a href="#shop">LEARN</a>
+                    <ListAnchorWrapper href="#learn">LEARN</ListAnchorWrapper>
                 </li>
-                </listWrapper>
+                <UserActionWrapper>
+                    <ListAnchorWrapper href="#learn">SUBSCRIBE</ListAnchorWrapper>
+                </UserActionWrapper>
+                <UserActionWrapper>
+                    <ListAnchorWrapper href="#learn">SIGN IN</ListAnchorWrapper>
+                </UserActionWrapper>
+            
 
-            </ul>
+            </ListWrapper>
+            <NavImageRightWrapper><img src={MainLogo} alt='store logo' height='100' width= '100'/></NavImageRightWrapper>
+            <NavImageRightWrapper><img src={MainLogo} alt='store logo' height='100' width= '100'/></NavImageRightWrapper>
 
-        </nav>
-        </navWrapper>
+
+
+            <hr></hr>
+        
+
+        </NavWrapper>
+        
 
 
     )
+    
+    
 }
 
 export default SiteNav
+
