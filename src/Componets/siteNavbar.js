@@ -5,6 +5,7 @@ const NavWrapper = styled.div`
 background-color: white;
 overflow: hidden;
 
+
 `;
 const ListWrapper = styled.ul`
 list-style-type: none;
@@ -28,13 +29,22 @@ const ListItemWrapper=styled.li`
   `
   const NavImageWrapper=styled.div`
   float: left;
+  padding-top: 0;
 `
 const NavImageRightWrapper=styled.div`
-float: right;
+float: right
 `
 const UserActionWrapper=styled.li`
     float: right;
+    margin-top: 0;
+    
 `
+const flexWrapper=styled.div`
+    display:flex;
+    flex-direction:row;
+    
+`
+
 
 
 
@@ -60,18 +70,20 @@ const SiteNav = () =>{
                 <li className="siteNavBar-item">
                     <ListAnchorWrapper href="#learn">LEARN</ListAnchorWrapper>
                 </li>
+              <flexWrapper>  
                 <UserActionWrapper>
                     <ListAnchorWrapper href="#learn">SUBSCRIBE</ListAnchorWrapper>
                 </UserActionWrapper>
                 <UserActionWrapper>
                     <ListAnchorWrapper href="#learn">SIGN IN</ListAnchorWrapper>
                 </UserActionWrapper>
-            
+            </flexWrapper>
 
             </ListWrapper>
+           <flexWrapper>
             <NavImageRightWrapper><img src={MainLogo} alt='store logo' height='100' width= '100'/></NavImageRightWrapper>
             <NavImageRightWrapper><img src={MainLogo} alt='store logo' height='100' width= '100'/></NavImageRightWrapper>
-
+        </flexWrapper>
 
 
             <hr></hr>
